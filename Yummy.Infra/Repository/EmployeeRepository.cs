@@ -56,7 +56,8 @@ namespace Yummy.Infra.Repository
 
         public int Update(Employee Data)
         {
-            var p = new DynamicParameters(); p.Add("@Name", Data.Name, dbType: DbType.String, direction: ParameterDirection.Input);
+            var p = new DynamicParameters(); 
+            p.Add("@Name", Data.Name, dbType: DbType.String, direction: ParameterDirection.Input);
             p.Add("@Id", Data.EmployeeID, dbType: DbType.Int32, direction: ParameterDirection.Input);
             p.Add("@UserName", Data.UserName, dbType: DbType.String, direction: ParameterDirection.Input);
             p.Add("@age", Data.Age, dbType: DbType.Int32, direction: ParameterDirection.Input);

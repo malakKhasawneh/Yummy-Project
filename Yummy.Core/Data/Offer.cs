@@ -10,8 +10,15 @@ namespace Yummy.Core.Data
     {
         [Key]
         public int OfferID { get; set; }
+
+        [Required(ErrorMessage = "Validity Date is required")]
         public DateTime Validity { get; set; }
+
+        [Required(ErrorMessage = "Discount Amonut is required")]
+        [Display(Name("Discount Amonut"))]
         public float DiscountAmonut_ { get; set; }
+
+        [Display(Name("Meal ID"))]
         public int MealID { get; set; }
         [ForeignKey("MealID")]
         public virtual Meal Meal { get; set; }

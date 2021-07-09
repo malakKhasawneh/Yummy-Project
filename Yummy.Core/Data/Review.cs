@@ -10,7 +10,10 @@ namespace Yummy.Core.Data
     {
         [Key]
         public int ReviewID { get; set; }
+        [Required(ErrorMessage = "Rate is required")]
         public int Rate { get; set; }
+
+        [Display(Name = "Customer")]
         public int CustomerID { get; set; }
         [ForeignKey("CustomerID")]
         public virtual Customer Customer { get; set; }
