@@ -24,9 +24,9 @@ namespace Yummy.API.Controllers
         [HttpPost]
         [ProducesResponseType(typeof(Employee), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(Employee), StatusCodes.Status400BadRequest)]
-        public Employee Create([FromBody] Employee book)
+        public Employee Create([FromBody] Employee emploee)
         {
-            return EmployeeService.Create(book);
+            return EmployeeService.Create(emploee);
         }
         [Authorize("Admin")]
         [HttpGet]
@@ -39,9 +39,9 @@ namespace Yummy.API.Controllers
         [HttpPut]
         [ProducesResponseType(typeof(Employee), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(Employee), StatusCodes.Status400BadRequest)]
-        public Employee Update([FromBody] Employee book)
+        public Employee Update([FromBody] Employee emploee)
         {
-            return EmployeeService.Update(book);
+            return EmployeeService.Update(emploee);
         }
         [Authorize("Admin")]
         [HttpDelete("{id}")]
